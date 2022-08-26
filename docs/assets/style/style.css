@@ -14,3 +14,7 @@ html,body
     display: table;
     clear: both;
 }
+
+a {
+    color: darkorange;
+}
