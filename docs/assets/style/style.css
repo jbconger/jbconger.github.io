@@ -1,19 +1,5 @@
-html,body
-{
-    font-family: 'Roboto';
-    font-size: 22px;
-    padding: 50px;
-}
-
-.column {
-    float: left;
-    width: 50%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+main {
+    display: block;
 }
 
 a {
@@ -21,13 +7,119 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 90%;
-    border-radius: 10px;
-    margin: auto;
+a:hover {
+    color: darkred;
 }
 
-.center {
-    margin: auto;
-    border: 3px solid green;
+h3 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin: 0 0 0 0.5em;
+    display: block;
 }
+
+img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+    font-family: 'Roboto';    
+    font-style: normal;
+    font-weight: 200;
+}
+
+.about {
+    padding: 6em 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 6em;
+}
+
+.about__heading {
+
+}
+
+.about__img {
+    justify-self: end;
+}
+
+section {
+    padding: 6em 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info {
+    width: 50%;
+}
+
+.light_gray--bg {
+    background-color: lightgray;
+}
+
+.dark_gray--bg {
+    background-color: lightslategray;
+}
+
+.hello {
+    height: 650px;
+}
+
+.hello__title {
+    font-size: 12em;
+    line-height: 1.0;
+    margin: 0;
+}
+
+.hello__subtitle {
+    font-size: 25px;
+    margin: 32px 0 0 30px;
+    justify-content: flex-start;
+}
+
+/* accordions */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }

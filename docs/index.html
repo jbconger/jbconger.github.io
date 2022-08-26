@@ -7,62 +7,31 @@
         <title>Jonathan Conger</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
         <link href="assets/style/style.css" type="text/css" rel="stylesheet">
-        <style>
-            html,body
-            {
-                font-family: 'Roboto';
-                font-size: 22px;
-                padding: 50px;
-            }
-
-            .column {
-                float: left;
-                width: 50%;
-            }
-            
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            a {
-                color: darkorange;
-                text-decoration: none;
-            }
-
-            img {
-                max-width: 90%;
-                border-radius: 10px;
-                margin: auto;
-            }
-
-            .center {
-                margin: auto;
-                border: 3px solid green;
-            }
-        </style>
+        <script type="text/javascript" src="assets/scripts/accordion.js"></script>
     </head>
     <body>
-        <div id="info">
-            
-        </div>
-        <div class="row">
-            <div class="column">
-                <img src="./assets/images/Jonathan.jpg" alt="Jonathan and Lego Batman in New York">
-            </div>
-            <div class="column">
-                <h2>Jonathan Conger</h2>
-                <h4>jaa-nuh-thn</h4>
-                <p>Born and raised in the Utah Rocky Mountains. Educated in Biology, Economics, and Video Game Design and Development. Experience in multiple industries include biomedical research, marketing, web development, politics, and digital entertainment.</p>
-                <h4>Skills &amp; Expertise</h4>
-                <p>Software engineering, gameplay and systems design, production, team management</p>
-                <h4>Favorite Game - Chrono Trigger</h4>
-                <p>This game is a timeless classic with a story, music, and innovative combat that captivated me in my youth. Chrono Trigger sparked my love for video games and inspired me to pursue a career in games development.</p>
-                <p>
-                    <a href="./assets/files/JonathanConger_Resume2022.pdf" target="_blank">Resume</a>
-                </p>
-            </div>
-        </div>
+        <main>
+            <section class="hello dark_gray--bg">
+                <h1 class="hello__title">Hello!</h1>
+            </section>
+            <section class="about light_gray--bg">
+                <img src="./assets/images/Jonathan.jpg" alt="Jonathan and Lego Batman in New York" class="about__img">
+                <div class="info">
+                    <h3>About Me</h3>
+                    <h4>My name is Jonathan (jaa-nuh-thn) Conger</h4>
+                    <p>Born and raised in the Utah Rocky Mountains. Educated in Biology, Economics, and Video Game Design and Development. Experience in multiple industries include biomedical research, marketing, web development, politics, and digital entertainment.</p>
+                    <h4>Skills &amp; Expertise</h4>
+                    <p>Software engineering, gameplay and systems design, production, team management</p>
+                    <h4>Favorite Game - Chrono Trigger</h4>
+                    <p>This timeless classic features an incredible story, memorable music, and innovative combat. Chrono Trigger sparked my love for video games and inspired me to pursue a career in games development.</p>
+                    <p>
+                        <a href="./assets/files/JonathanConger_Resume2022.pdf" target="_blank">Resume</a>
+                    </p>
+                </div>
+            </section>
+            <section class="dark_gray--bg">
+                <h3>Let's Play a Game</h3>
+            </section>
+        </main>
     </body>
 </html>
