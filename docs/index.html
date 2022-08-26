@@ -5,25 +5,49 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
         <title>Jonathan Conger</title>
-        <link rel="stylesheet" href="https://jbconger.github.io/docs/assets/style/style.css">
+        <style>
+            html,body
+            {
+                padding: 50px;
+            }
+
+            .column {
+                float: left;
+                width: 50%;
+            }
+            
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            a {
+                color: darkorange;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        </style>
     </head>
     <body>
         <div id="info">
-            <img src="./assets/images/Jonathan.jpg" alt="Jonathan and Lego Batman in New York">
-            <p>Canvas Name: Jonathan Conger</p>
-            <p>Preferred Name: Jonathan or Jon</p>
-            <p>Phonetic Spelling of First Name: jaa-nuh-thn</p>
-            <p>Bio: Born and raised in the Utah Rocky Mountains. Educated in Biology, Economics, and Video Game Design and Development. Experience in multiple industries include biomedical research, marketing, web development, politics, and digital entertainment.</p>
-            <p>Expertise: Gameplay and user experience</p>
             <p>Favorite Game: Chrono Trigger - This game is a timeless classic with a story, music, and innovative combat that captivated me in my youth. This game sparked my love for video games and inspired me to pursue a career in games development.</p>
             <p><i>Resume</i></p>
         </div>
         <div class="row">
             <div class="column">
                 <p>Column 1 Content</p>
+                <img src="./assets/images/Jonathan.jpg" alt="Jonathan and Lego Batman in New York" style="width=100px;">
             </div>
             <div class="column">
                 <p>Column 2 Content</p>
+                <p>Canvas Name: Jonathan Conger</p>
+                <p>Preferred Name: Jonathan or Jon</p>
+                <p>Phonetic Spelling of First Name: jaa-nuh-thn</p>
+                <p>Bio: Born and raised in the Utah Rocky Mountains. Educated in Biology, Economics, and Video Game Design and Development. Experience in multiple industries include biomedical research, marketing, web development, politics, and digital entertainment.</p>
+                <p>Expertise: Gameplay and user experience</p>
             </div>
         </div>
     </body>
