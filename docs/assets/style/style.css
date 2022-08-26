@@ -1,5 +1,7 @@
 html,body
 {
+    font-family: 'Roboto';
+    font-size: 22px;
     padding: 50px;
 }
 
@@ -7,8 +9,7 @@ html,body
     float: left;
     width: 50%;
 }
-  
- /* Clear floats after the columns */
+
 .row:after {
     content: "";
     display: table;
@@ -17,4 +18,16 @@ html,body
 
 a {
     color: darkorange;
+    text-decoration: none;
+}
+
+img {
+    max-width: 90%;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.center {
+    margin: auto;
+    border: 3px solid green;
 }
