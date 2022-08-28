@@ -21,6 +21,11 @@ h3 {
 img {
     max-width: 70%;
     border-radius: 10px;
+    transition: transform .7s ease-in-out;
+}
+
+img:hover {
+    transform: rotate(360deg);
 }
 
 *{
@@ -42,12 +47,15 @@ body {
     grid-gap: 6em;
 }
 
-.about__heading {
-
-}
-
 .about__img {
     justify-self: end;
+}
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 60%;
 }
 
 section {
@@ -71,7 +79,7 @@ section {
 }
 
 .hello {
-    height: 650px;
+    height: 550px;
 }
 
 .hello__title {
@@ -86,46 +94,8 @@ section {
     justify-content: flex-start;
 }
 
-/* accordions */
-.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
-  
-  .accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-
-  /* gradient text and animation */
-  .gradient-text {
+/* gradient text and animation */
+.gradient-text {
     /* Fallback: Set a background color. */
     background-color: #CA4246;
     
@@ -156,68 +126,149 @@ section {
       /* This animates it on page load and when hovering out. */
       animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
   
-  }
+}
   
-  .gradient-text:hover{
+.gradient-text:hover{
       animation: rainbow-text-simple-animation 0.5s ease-in forwards;
-  }
+}
   
   
   /* Move the background and make it smaller. */
   /* Animation shown when entering the page and after the hover animation. */
-  @keyframes rainbow-text-simple-animation-rev {
-      0% {
-          background-size: 650%;
-      }
-      40% {
-          background-size: 650%;
-      }
-      100% {
-          background-size: 100%;
-      }
-  }
+@keyframes rainbow-text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
   
   /* Move the background and make it larger. */
   /* Animation shown when hovering over the text. */
-  @keyframes rainbow-text-simple-animation {
-      0% {
-          background-size: 100%;
-      }
-      80% {
-          background-size: 900%;
-      }
-      100% {
-          background-size: 900%;
-      }
-  }
-
-  /* dancing text */
-h3.dance:hover span {
-    animation: jump .5s infinite;
-    cursor: pointer;
-}
-
-@keyframes jump {
+@keyframes rainbow-text-simple-animation {
     0% {
-        transform: translateY(0px);
+        background-size: 100%;
     }
-    50% {
-        transform: translateY(-30px);
+    80% {
+        background-size: 900%;
     }
     100% {
-        transform: translateY(0px);
+        background-size: 900%;
     }
 }
 
-h3.dance span:nth-child(1) {
-    animation-delay: .1s;
+/* spin text */
+.spin {
+    position: relative;
+  }
+
+.spin span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
 }
-h3.dance span:nth-child(2) {
-    animation-delay: .1s;
+
+@keyframes flip {
+    0%,80% {
+        transform: rotateY(360deg) 
+    }
 }
-h3.dance span:nth-child(3) {
-    animation-delay: .1s;
-}
-h3.dance span:nth-child(4) {
-    animation-delay: .1s;
-}
+
+/* Accordion styles */
+ul {
+    list-style: none;
+    perspective: 900;
+    padding: 0;
+    margin: 0;
+  }
+  ul li {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 4px;
+    padding-top: 18px;
+    border-top: 1px dotted #dce7eb;
+  }
+  ul li:nth-of-type(1) {
+    animation-delay: 0.5s;
+  }
+  ul li:nth-of-type(2) {
+    animation-delay: 0.75s;
+  }
+  ul li:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+  ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  ul li i {
+    position: absolute;
+    transform: translate(-6px, 0);
+    margin-top: 16px;
+    right: 0;
+  }
+  ul li i:before, ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 3px;
+    height: 9px;
+  }
+  ul li i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+  }
+  ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+  }
+  ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  ul li input[type=checkbox]:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+  }
+  ul li input[type=checkbox]:checked ~ i:before {
+    transform: translate(2px, 0) rotate(45deg);
+  }
+  ul li input[type=checkbox]:checked ~ i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+  }
+  
+  @keyframes flipdown {
+    0% {
+      opacity: 0;
+      transform-origin: top center;
+      transform: rotateX(-90deg);
+    }
+    5% {
+      opacity: 1;
+    }
+    80% {
+      transform: rotateX(8deg);
+    }
+    83% {
+      transform: rotateX(6deg);
+    }
+    92% {
+      transform: rotateX(-3deg);
+    }
+    100% {
+      transform-origin: top center;
+      transform: rotateX(0deg);
+    }
+  }
