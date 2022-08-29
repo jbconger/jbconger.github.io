@@ -19,7 +19,7 @@ h3 {
 }
 
 img {
-    max-width: 70%;
+    max-width: 50%;
     border-radius: 10px;
     transition: transform .7s ease-in-out;
 }
@@ -55,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 60%;
+    width: 50%;
 }
 
 section {
@@ -67,7 +67,7 @@ section {
 }
 
 .info {
-    width: 70%;
+    width: 50%;
 }
 
 .light_gray--bg {
@@ -92,6 +92,23 @@ section {
     font-size: 25px;
     margin: 32px 0 0 30px;
     justify-content: flex-start;
+}
+
+.center_text {
+    text-align: center;
+    width: 50%;
+}
+
+iframe {
+    margin: auto;
+}
+
+.link {
+    color: steelblue;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 /* gradient text and animation From: https://codepen.io/bsander/pen/pPpbNm */
